@@ -145,6 +145,11 @@ class ToAstSmokeTest {
     }
 
     @Test
+    fun ast_performance_evaluator() {
+        for (i in 1..10) assertASTCanBeProduced("JD_003_full")
+    }
+
+    @Test
     fun buildAstForACTGRP_FIX() {
         val cu = assertASTCanBeProduced("ACTGRP_FIX")
         assertEquals(firstActivationGroupDirective(cu).type, NamedActivationGroup("MYACT"))
