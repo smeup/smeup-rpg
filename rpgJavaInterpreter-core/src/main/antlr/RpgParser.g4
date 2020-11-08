@@ -2,6 +2,8 @@ parser grammar RpgParser;
 
 //import FreeOpsParser;
 
+// Comments wit § are a test that aims at speeding up parsing removing "RPG free" syntax
+
 options {   tokenVocab = RpgLexer; }
 
 r: (dcl_pr 
@@ -21,7 +23,7 @@ statement:
 	| dcl_c
 	| (dspec_fixed)
   	| ospec_fixed
-	| fspec 
+//§	| fspec
 	| fspec_fixed 
 	| block
 	| cspec_fixed
@@ -30,10 +32,10 @@ statement:
 	| ispec_fixed 
 	| hspec_fixed
 	| star_comments
-	| free_linecomments
+//§	| free_linecomments
 	| blank_line 
-	| directive 
-	| free
+	| directive
+//§	| free
 ;
 
 endSourceBlock: (endSource)+;
