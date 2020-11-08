@@ -2,7 +2,7 @@ parser grammar RpgParser;
 
 //import FreeOpsParser;
 
-// Comments wit § are a test that aims at speeding up parsing removing "RPG free" syntax
+// Comments with § are a test that aims at speeding up parsing removing "RPG free" syntax
 
 options {   tokenVocab = RpgLexer; }
 
